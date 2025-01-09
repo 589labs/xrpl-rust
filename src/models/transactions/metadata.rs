@@ -39,8 +39,7 @@ pub struct Fields<'a> {
     #[serde(rename = "NFTokens")]
     pub nftokens: Option<Vec<NFTokenMetadata<'a>>>,
     pub previous_page_min: Option<Cow<'a, str>>,
-    #[serde(default)]
-    pub sequence: u32,
+    pub sequence: Option<u32>,
     pub taker_gets: Option<Amount<'a>>,
     pub taker_pays: Option<Amount<'a>>,
     pub xchain_claim_id: Option<Cow<'a, str>>,
